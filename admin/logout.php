@@ -1,0 +1,14 @@
+<?php 
+if(isset($_GET['name'])){
+    session_start();
+    unset($_SESSION['username']);
+    unset($_SESSION['login']);
+    session_destroy();
+    header("location:login.php");
+    exit();
+}
+else
+{
+    header("location:index.php");
+}
+?>
